@@ -161,6 +161,30 @@
 
 
 
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">评论</h3>
+        
+<div id="comment-container"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.4.1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.4.1/dist/gitalk.min.js"></script>
+<script>
+    var gitalk = new Gitalk({
+        clientID: '4c0cee2af48e6ff22654',
+        clientSecret: '21093576b03aaf1df27712e7f36f731e18999e8b',
+        id: 'a7224db13f3a49096aa27c1876d1a947',
+        repo: 'millet.github.io',
+        owner: 'millet',
+        admin: "millet",
+        createIssueManually: false,
+        distractionFreeMode: false
+    })
+    gitalk.render('comment-container')
+</script>
+
+    </div>
+</div>
+
 </div>
                 
 
