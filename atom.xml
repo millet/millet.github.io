@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>一粒米的博客~</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://millet.vip/"/>
+  <updated>2020-02-21T14:34:03.976Z</updated>
+  <id>http://millet.vip/</id>
+  
+  <author>
+    <name>Millet</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello Hexo</title>
+    <link href="http://millet.vip/article/hello-hexo.html"/>
+    <id>http://millet.vip/article/hello-hexo.html</id>
+    <published>2020-02-20T12:00:00.000Z</published>
+    <updated>2020-02-21T14:34:03.976Z</updated>
+    
+    <content type="html"><![CDATA[<p>本文记录搭建Hexo博客的过程，以及分享一些经验心得。</p><a id="more"></a><h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p><img src="/images/desert.jpg" alt=""></p><h3 id="安装Git和Node-JS"><a href="#安装Git和Node-JS" class="headerlink" title="安装Git和Node.JS"></a>安装Git和Node.JS</h3><p><img src="hello-hexo/t1.jpg" alt=""></p><h2 id="配置GitHub"><a href="#配置GitHub" class="headerlink" title="配置GitHub"></a>配置GitHub</h2><h3 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h3><h3 id="创建SSH-key"><a href="#创建SSH-key" class="headerlink" title="创建SSH key"></a>创建SSH key</h3><p><img src="hello-hexo/t2.jpg" alt=""></p><h2 id="配置Hexo"><a href="#配置Hexo" class="headerlink" title="配置Hexo"></a>配置Hexo</h2><p><img src="hello-hexo/t3.jpg" alt=""></p><h3 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h3><h3 id="美化"><a href="#美化" class="headerlink" title="美化"></a>美化</h3><h3 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h3><h2 id="Hexo基本命令"><a href="#Hexo基本命令" class="headerlink" title="Hexo基本命令"></a>Hexo基本命令</h2><h2 id="错误解决"><a href="#错误解决" class="headerlink" title="错误解决"></a>错误解决</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文记录搭建Hexo博客的过程，以及分享一些经验心得。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://millet.vip/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="技巧经验" scheme="http://millet.vip/tags/%E6%8A%80%E5%B7%A7%E7%BB%8F%E9%AA%8C/"/>
+    
+  </entry>
+  
+</feed>
