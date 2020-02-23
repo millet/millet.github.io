@@ -7,24 +7,30 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>一粒米的博客~</title>
+<title>Hexo文章编写格式 - 一粒米的博客~</title>
 
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="一粒米的博客~">
-<meta property="og:url" content="https://www.millet.vip/index.html">
+    <meta name="description" content="Hexo文章除了支持原生Markdown语法，还支持哪些语法，本文将列举一些实用的文章编写代码。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo文章编写格式">
+<meta property="og:url" content="https://www.millet.vip/article/article-edit.html">
 <meta property="og:site_name" content="一粒米的博客~">
+<meta property="og:description" content="Hexo文章除了支持原生Markdown语法，还支持哪些语法，本文将列举一些实用的文章编写代码。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://www.millet.vip/images/og_image.png">
+<meta property="og:image" content="https://www.millet.vip/images/desert.jpg">
+<meta property="article:published_time" content="2020-02-22T14:02:00.000Z">
+<meta property="article:modified_time" content="2020-02-23T01:30:43.954Z">
 <meta property="article:author" content="Millet">
+<meta property="article:tag" content="技巧经验">
+<meta property="article:tag" content="Hexo">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://www.millet.vip/images/og_image.png">
+<meta name="twitter:image" content="https://www.millet.vip/images/desert.jpg">
 
 
 
 
 
-<link rel="alternative" href="/atom.xml" title="一粒米的博客~" type="application/atom+xml">
+<link rel="alternative" href="/atom.xml" title="Hexo文章编写格式" type="application/atom+xml">
 
 
 
@@ -78,7 +84,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="一粒米的博客~" height="28">
+                <img src="/images/logo.svg" alt="Hexo文章编写格式" height="28">
             
             </a>
         </div>
@@ -86,7 +92,7 @@
             
             <div class="navbar-start">
                 
-                <a class="navbar-item is-active"
+                <a class="navbar-item"
                 href="/">首页</a>
                 
                 <a class="navbar-item"
@@ -120,6 +126,10 @@
                     
                 
                 
+                <a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
                 
                 <a class="navbar-item search" title="搜索" href="javascript:;">
                     <i class="fas fa-search"></i>
@@ -133,20 +143,19 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
-    
+                <div class="column is-8-tablet is-8-desktop is-9-widescreen has-order-2 column-main">
 <div class="card">
     
     <div class="card-image">
-        <a href="/article/article-edit.html" class="image is-7by1">
+        <span  class="image is-7by1">
             <img class="thumbnail" src="/images/desert.jpg" alt="Hexo文章编写格式">
-        </a>
+        </span>
     </div>
     
     <div class="card-content article ">
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/article/article-edit.html"><i class="fas fa-angle-double-right"></i>Hexo文章编写格式</a>
+                <i class="fas fa-angle-double-right"></i>Hexo文章编写格式
             
         </h1>
         
@@ -171,32 +180,53 @@
                 </span>
                 
                 
+                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
+                    <i class="far fa-eye"></i>
+                    <span id="busuanzi_value_page_pv">0</span>次访问
+                </span>
+                
             </div>
         </div>
         
         <div class="content">
             <p>Hexo文章除了支持原生Markdown语法，还支持哪些语法，本文将列举一些实用的文章编写代码。</p>
+<a id="more"></a>
+
+<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><p>原生Markdown代码块</p>
+<p>增强代码块</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codeblock [title] [lang:language] [url] [link text] %&#125;</span><br><span class="line">    CODE</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% blockquote [author[, source]] [link] [source_link_title] %&#125;</span><br><span class="line">content</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% img [class names] &#x2F;path&#x2F;to&#x2F;image [width] [height] [title text [alt text]] %&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h2>
         </div>
         
+            <ul class="post-copyright">
+            <li><strong>本文标题：</strong><a href="https://www.millet.vip/article/article-edit.html">Hexo文章编写格式</a></li>
+            <li><strong>本文作者：</strong><a href="https://www.millet.vip">Millet</a></li>
+            <li><strong>本文链接：</strong><a href="https://www.millet.vip/article/article-edit.html">https://www.millet.vip/article/article-edit.html</a></li>
+            <li><strong>发布时间：</strong>2020-02-22</li>
+            <li><strong>版权声明：</strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！
+            </li>
+            </ul>
         
         
         <hr style="height:1px;margin:1rem 0"/>
-        <div class="level is-mobile is-flex">
-            <div class="level-start">
-                
-                <div class="level-item is-size-7 is-uppercase">
-                    <i class="fas fa-tags has-text-grey"></i>&nbsp;
-                    <a class="has-link-grey -link" href="/tags/Hexo/" rel="tag">Hexo</a>,&nbsp;<a class="has-link-grey -link" href="/tags/%E6%8A%80%E5%B7%A7%E7%BB%8F%E9%AA%8C/" rel="tag">技巧经验</a>
-                </div>
-                
-            </div>
+        <div class="level is-size-7 is-uppercase">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/article/article-edit.html#more"><i class="fas fa-book-reader has-text-grey"></i>&nbsp;&nbsp;阅读更多</a>
+                    <i class="fas fa-tags has-text-grey"></i>&nbsp;
+                    <a class="has-link-grey -link" href="/tags/Hexo/" rel="tag">Hexo</a>,&nbsp;<a class="has-link-grey -link" href="/tags/%E6%8A%80%E5%B7%A7%E7%BB%8F%E9%AA%8C/" rel="tag">技巧经验</a>
                 </div>
             </div>
         </div>
         
+        
+        
+        <div class="social-share"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css">
+<script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
         
     </div>
 </div>
@@ -205,84 +235,45 @@
 
 
 
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/article/hello-hexo.html">
+                <span class="level-item">Hexo+icarus主题快速搭建教程</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
 
 
 
-
-    
 <div class="card">
-    
-    <div class="card-image">
-        <a href="/article/hello-hexo.html" class="image is-7by1">
-            <img class="thumbnail" src="/images/hello-hexo.jpg" alt="Hexo+icarus主题快速搭建教程">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/article/hello-hexo.html"><i class="fas fa-angle-double-right"></i>Hexo+icarus主题快速搭建教程</a>
-            
-        </h1>
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">评论</h3>
         
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-02-20T12:00:00.000Z"><i class="far fa-calendar-alt">&nbsp;</i>2020-02-20</time>
-                
-                <time class="level-item has-text-grey is-hidden-mobile" datetime="2020-02-23T01:29:54.777Z"><i class="far fa-calendar-check">&nbsp;</i>2020-02-23</time>
-                
-                
-                <div class="level-item">
-                <i class="far fa-folder-open has-text-grey"></i>&nbsp;
-                <a class="has-link-grey -link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    <i class="far fa-clock"></i>&nbsp;
-                    
-                    
-                    14 分钟 读完 (大约 2085 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <div class="content">
-            <p>本文记录搭建Hexo博客的过程，以及分享一些经验心得。</p>
-        </div>
-        
-        
-        
-        <hr style="height:1px;margin:1rem 0"/>
-        <div class="level is-mobile is-flex">
-            <div class="level-start">
-                
-                <div class="level-item is-size-7 is-uppercase">
-                    <i class="fas fa-tags has-text-grey"></i>&nbsp;
-                    <a class="has-link-grey -link" href="/tags/Hexo/" rel="tag">Hexo</a>,&nbsp;<a class="has-link-grey -link" href="/tags/%E6%8A%80%E5%B7%A7%E7%BB%8F%E9%AA%8C/" rel="tag">技巧经验</a>
-                </div>
-                
-            </div>
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/article/hello-hexo.html#more"><i class="fas fa-book-reader has-text-grey"></i>&nbsp;&nbsp;阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
+<div id="comment-container"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.4.1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.4.1/dist/gitalk.min.js"></script>
+<script>
+    var gitalk = new Gitalk({
+        clientID: '4c0cee2af48e6ff22654',
+        clientSecret: '21093576b03aaf1df27712e7f36f731e18999e8b',
+        id: '35dc90fc106ed0de3be63173cd958a12',
+        repo: 'millet.github.io',
+        owner: 'millet',
+        admin: "millet",
+        createIssueManually: false,
+        distractionFreeMode: false
+    })
+    gitalk.render('comment-container')
+</script>
+
     </div>
 </div>
-
-
-
-
-
-
-
-
 
 </div>
                 
@@ -366,239 +357,44 @@
 
     
         
-    
-        
-<div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                分类
-            </h3>
-            <ul class="menu-list">
-            <li>
-        <a class="level is-marginless" href="/categories/%E6%95%99%E7%A8%8B/">
-            <span class="level-start">
-                <span class="level-item">教程</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">2</span>
-            </span>
-        </a></li>
-            </ul>
+
+    <div class="card widget column-left is-sticky" id="toc">
+        <div class="card-content" style="max-height:calc(100vh - 22px);overflow:scroll">
+            <div class="menu">
+                <h3 class="menu-label">
+                    目录
+                </h3>
+                <ul class="menu-list"><li>
+        <a class="is-flex" href="#代码块">
+        <span class="has-mr-6">1</span>
+        <span>代码块</span>
+        </a></li><li>
+        <a class="is-flex" href="#引用">
+        <span class="has-mr-6">2</span>
+        <span>引用</span>
+        </a></li><li>
+        <a class="is-flex" href="#图片">
+        <span class="has-mr-6">3</span>
+        <span>图片</span>
+        </a></li><li>
+        <a class="is-flex" href="#视频">
+        <span class="has-mr-6">4</span>
+        <span>视频</span>
+        </a></li></ul>
+            </div>
         </div>
     </div>
-</div>
-    
-        <div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-        <h3 class="menu-label">
-            链接
-        </h3>
-        <ul class="menu-list">
-        
-            <li>
-                <a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener">
-                    <span class="level-left">
-                        <span class="level-item">Hexo</span>
-                    </span>
-                    <span class="level-right">
-                        <span class="level-item tag">hexo.io</span>
-                    </span>
-                </a>
-            </li>
-        
-        </ul>
-        </div>
-    </div>
-</div>
+
 
     
     
         <div class="column-right-shadow is-hidden-widescreen is-sticky">
-        
-            <div class="card widget">
-    <div class="card-content">
-        <h3 class="menu-label">
-            最新文章
-        </h3>
-        
-        <article class="media">
-            
-            <a href="/article/article-edit.html" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/desert.jpg" alt="Hexo文章编写格式">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-22T14:02:00.000Z">2020-02-22</time></div>
-                    <a href="/article/article-edit.html" class="title has-link-black-ter is-size-6 has-text-weight-normal">Hexo文章编写格式</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/article/hello-hexo.html" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/hello-hexo.jpg" alt="Hexo+icarus主题快速搭建教程">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-20T12:00:00.000Z">2020-02-20</time></div>
-                    <a href="/article/hello-hexo.html" class="title has-link-black-ter is-size-6 has-text-weight-normal">Hexo+icarus主题快速搭建教程</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-    </div>
-</div>
-        
-            <div class="card widget is-hidden-mobile">
-    <div class="card-content">
-        <div class="menu">
-        <h3 class="menu-label">
-            归档
-        </h3>
-        <ul class="menu-list">
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2020/02/">
-                <span class="level-start">
-                    <span class="level-item">二月 2020</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">2</span>
-                </span>
-            </a>
-        </li>
-        
-        </ul>
-        </div>
-    </div>
-</div>
-
-        
-            
-<div class="card widget is-hidden-mobile">
-    <div class="card-content">
-        <h3 class="menu-label">
-            标签云
-        </h3>
-        <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/%E6%8A%80%E5%B7%A7%E7%BB%8F%E9%AA%8C/" style="font-size: 10px;">技巧经验</a>
-    </div>
-</div>
-
-
         
         </div>
     
 </div>
 
                 
-
-
-
-
-<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right is-sticky">
-    
-        <div class="card widget">
-    <div class="card-content">
-        <h3 class="menu-label">
-            最新文章
-        </h3>
-        
-        <article class="media">
-            
-            <a href="/article/article-edit.html" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/desert.jpg" alt="Hexo文章编写格式">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-22T14:02:00.000Z">2020-02-22</time></div>
-                    <a href="/article/article-edit.html" class="title has-link-black-ter is-size-6 has-text-weight-normal">Hexo文章编写格式</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/article/hello-hexo.html" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/hello-hexo.jpg" alt="Hexo+icarus主题快速搭建教程">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-20T12:00:00.000Z">2020-02-20</time></div>
-                    <a href="/article/hello-hexo.html" class="title has-link-black-ter is-size-6 has-text-weight-normal">Hexo+icarus主题快速搭建教程</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-    </div>
-</div>
-    
-        <div class="card widget is-hidden-mobile">
-    <div class="card-content">
-        <div class="menu">
-        <h3 class="menu-label">
-            归档
-        </h3>
-        <ul class="menu-list">
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2020/02/">
-                <span class="level-start">
-                    <span class="level-item">二月 2020</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">2</span>
-                </span>
-            </a>
-        </li>
-        
-        </ul>
-        </div>
-    </div>
-</div>
-
-    
-        
-<div class="card widget is-hidden-mobile">
-    <div class="card-content">
-        <h3 class="menu-label">
-            标签云
-        </h3>
-        <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/%E6%8A%80%E5%B7%A7%E7%BB%8F%E9%AA%8C/" style="font-size: 10px;">技巧经验</a>
-    </div>
-</div>
-
-
-    
-    
-</div>
-
             </div>
         </div>
     </section>
@@ -608,7 +404,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="一粒米的博客~" height="28">
+                    <img src="/images/logo.svg" alt="Hexo文章编写格式" height="28">
                 
                 </a>
                 <p class="is-size-7">
