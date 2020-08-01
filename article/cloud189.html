@@ -10,16 +10,16 @@
 <title>天翼云在线网盘搭建教程 - 一粒米的博客~</title>
 
 
-    <meta name="description" content="天翼云盘+阿里云ECS+TCShare2.8 搭建在线网盘教程">
+    <meta name="description" content="天翼云盘+阿里云ECS+TCShare2.8 搭建在线网盘教程 已失效">
 <meta property="og:type" content="article">
 <meta property="og:title" content="天翼云在线网盘搭建教程">
 <meta property="og:url" content="https://www.millet.vip/article/cloud189.html">
 <meta property="og:site_name" content="一粒米的博客~">
-<meta property="og:description" content="天翼云盘+阿里云ECS+TCShare2.8 搭建在线网盘教程">
+<meta property="og:description" content="天翼云盘+阿里云ECS+TCShare2.8 搭建在线网盘教程 已失效">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://www.millet.vip/images/cloud189.jpg">
 <meta property="article:published_time" content="2020-03-01T10:00:00.000Z">
-<meta property="article:modified_time" content="2020-03-02T09:53:00.085Z">
+<meta property="article:modified_time" content="2020-05-20T01:14:45.000Z">
 <meta property="article:author" content="Millet">
 <meta property="article:tag" content="技术经验">
 <meta property="article:tag" content="宝塔">
@@ -170,7 +170,7 @@
             <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2020-03-01T10:00:00.000Z"><i class="far fa-calendar-alt">&nbsp;</i>2020-03-01</time>
                 
-                <time class="level-item has-text-grey is-hidden-mobile" datetime="2020-03-02T09:53:00.085Z"><i class="far fa-calendar-check">&nbsp;</i>2020-03-02</time>
+                <time class="level-item has-text-grey is-hidden-mobile" datetime="2020-05-20T01:14:45.000Z"><i class="far fa-calendar-check">&nbsp;</i>2020-05-20</time>
                 
                 
                 <div class="level-item">
@@ -183,7 +183,7 @@
                     <i class="far fa-clock"></i>&nbsp;
                     
                     
-                    6 分钟 读完 (大约 957 个字)
+                    7 分钟 读完 (大约 1032 个字)
                 </span>
                 
                 
@@ -196,12 +196,12 @@
         </div>
         
         <div class="content">
-            <p>天翼云盘+阿里云ECS+TCShare2.8 搭建在线网盘教程</p>
+            <p><del>天翼云盘+阿里云ECS+TCShare2.8 搭建在线网盘教程</del> 已失效</p>
 <a id="more"></a>
 
 <h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p><strong>下载TCShare项目：</strong></p>
 <blockquote>
-<p>项目地址：<a href="https://github.com/xytoki/TCShare">https://github.com/xytoki/TCShare</a></p>
+<p>项目地址：<del><a href="https://github.com/xytoki/TCShare">https://github.com/xytoki/TCShare</a></del></p>
 </blockquote>
 <p><strong>获取阿里云ECS：</strong><br>可以直接购买，大概10元一个月<br><a href="https://promotion.aliyun.com/ntms/act/campus2018.html">https://promotion.aliyun.com/ntms/act/campus2018.html</a><br>现在也可以申请免费学生主机<br><a href="https://developer.aliyun.com/adc/student/">https://developer.aliyun.com/adc/student/</a></p>
 <h2 id="配置ECS"><a href="#配置ECS" class="headerlink" title="配置ECS"></a>配置ECS</h2><h3 id="安装宝塔"><a href="#安装宝塔" class="headerlink" title="安装宝塔"></a>安装宝塔</h3><p>可以自己安装宝塔官网的文档使用命令安装，注意对应主机系统版本。</p>
@@ -219,13 +219,15 @@
 <p>然后回到软件商店，打开PHP-7.2的设置，把禁用函数中的putenv删除<br><img src="cloud189/bt04.png" alt=""></p>
 <h2 id="配置TCShare"><a href="#配置TCShare" class="headerlink" title="配置TCShare"></a>配置TCShare</h2><h3 id="填写API"><a href="#填写API" class="headerlink" title="填写API"></a>填写API</h3><p>将GitHub上下载的项目文件解压<br>新建一个文本，将以下代码复制,将FD,AK,SK的值填上（至于这个API为多少请自行搜索），然后<strong>另存为</strong><code>.env</code>到TCShare目录（<strong>TCShare老版本使用config.php配置变量信息,之后会停用，所以直接使用env方式</strong>）</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#   XS 是前缀</span></span><br><span class="line"><span class="comment">#   | -KEY 是配置种类，可选KEY，APP，SEC</span></span><br><span class="line"><span class="comment">#   | | - -ct是key的ID（类似config.php）</span></span><br><span class="line"><span class="comment">#   | | - | - something是配置名称</span></span><br><span class="line"><span class="comment">#   | | - | - | - - - - value在等号右边</span></span><br><span class="line"><span class="comment">#   XS_KEY_ct_something=value</span></span><br><span class="line"></span><br><span class="line">    XS_KEY_ct=ctyun   <span class="comment">#必填，值为ctyun</span></span><br><span class="line">    XS_KEY_ct_FD=     <span class="comment">#应用文件夹名</span></span><br><span class="line">    XS_KEY_ct_AK=     <span class="comment">#AK</span></span><br><span class="line">    XS_KEY_ct_SK=     <span class="comment">#SK</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#   这里APP后面的可以是任意值，一般就123456下去</span></span><br><span class="line"><span class="comment">#          ↓</span></span><br><span class="line">    XS_APP_1=/              <span class="comment">#挂载路径</span></span><br><span class="line">    XS_APP_1_NAME=TCShare   <span class="comment">#网盘名称</span></span><br><span class="line">    XS_APP_1_THEME=mdui     <span class="comment">#界面主题</span></span><br><span class="line">    XS_APP_1_BASE=/         <span class="comment">#网盘内路径</span></span><br><span class="line">    XS_APP_1_KEY=ct         <span class="comment">#对应上面Key的ID</span></span><br></pre></td></tr></table></figure>
+<p><strong>API失效后新授权方式：</strong><br>1.获取key绑定天翼云账号<br>2.下载xytc.php放到_plugins文件夹里，env配置以下参数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">XS_KEY_ct&#x3D;xytc   #必填</span><br><span class="line">XS_CONFIG_PASS&#x3D;password   #env上锁</span><br><span class="line"></span><br><span class="line">XS_APP_1&#x3D;&#x2F;             #挂载路径</span><br><span class="line">XS_APP_1_NAME&#x3D;TCShare     #网盘名称</span><br><span class="line">XS_APP_1_THEME&#x3D;mdui     #界面主题</span><br><span class="line">XS_APP_1_BASE&#x3D;&#x2F;      #网盘内路径</span><br><span class="line">XS_APP_1_KEY&#x3D;ct         #对应上面Key的ID</span><br></pre></td></tr></table></figure>
+
 <h3 id="安装环境依赖"><a href="#安装环境依赖" class="headerlink" title="安装环境依赖"></a>安装环境依赖</h3><p>将解压的TCShare项目文件夹使用宝塔上传到网站目录（删除网站目录原有文件），<strong>注意文件是放在网站根目录不能放在子文件夹</strong>，如图<br><img src="cloud189/bt05.png" alt=""></p>
 <p>然后打开之前登陆的命令终端，<code>cd /www/wwwroot/你的域名</code></p>
 <p>再输入<code>composer install</code>，等待完成<br><img src="cloud189/ecs05.png" alt=""></p>
 <h2 id="云盘授权"><a href="#云盘授权" class="headerlink" title="云盘授权"></a>云盘授权</h2><p>打开网址 <strong>http://你的域名/-install</strong> ，进行授权<br><img src="cloud189/tc01.png" alt=""><br>登陆天翼云账号，即可自动跳转在线网盘（TCShare2.8支持自动获取token）<br><img src="cloud189/tc02.png" alt=""></p>
 <p>至此搭建完成，只需要将文件上传到天翼云盘中的我的应用相关目录下即可在网站上访问下载。</p>
-<p><a href="http://47.112.154.132/">网盘地址</a></p>
-<p><strong>最后</strong><br>感谢<a href="https://www.hostloc.com/thread-640211-1-1.html">wweng</a>大佬的TCShare开源项目<br>感谢酷友<a href="https://www.silensky.com/">沉默太沉重的</a>解答</p>
+<p><strong>最后</strong><br>感谢<a href="https://www.hostloc.com/thread-640211-1-1.html">wweng</a>大佬的TCShare开源项目</p>
 
         </div>
         
